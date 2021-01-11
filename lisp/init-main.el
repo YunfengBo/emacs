@@ -1,7 +1,5 @@
 ;;============================ 基本配置 =============================
 (custom-set-variables
- ;; 显示 tab bar
- '(tab-bar-mode t)
  ;; 启动界面: t: disable nil: enable
  '(inhibit-startup-message t)
  ;; 显示列号

@@ -67,5 +67,13 @@
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
 
+;; Markdown
+(use-package markdown-mode)
+;; JSON
+(use-package json-mode)
+;; Rest Client
+(use-package restclient
+  :mode ("\\.http\\'" . restclient-mode))
+
 (provide 'init-package)
 ;;; init-package.el ends here
