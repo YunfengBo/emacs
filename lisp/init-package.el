@@ -54,10 +54,12 @@
    company-minimum-prefix-length 2
    company-selection-wrap-around t)
   :config
-  ;; disables TAB in company-mode, freeing it for yasnippet
-  (global-company-mode)
-  (define-key company-active-map [tab] nil)
-  (define-key company-active-map (kbd "TAB") nil))
+  (progn
+    ;; disables TAB in company-mode, freeing it for yasnippet
+    (global-company-mode)
+    (define-key company-active-map [tab] nil)
+    (define-key company-active-map (kbd "TAB") nil)
+    (add-hook 'after-init-hook 'global-company-mode)))
 
 ;; 多光标选择
 (use-package multiple-cursors

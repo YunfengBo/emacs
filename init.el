@@ -4,7 +4,28 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(auto-image-file-mode t)
+ '(auto-save-interval 600)
+ '(blink-cursor-mode 1)
+ '(column-number-mode t)
+ '(default-buffer-file-coding-system 'utf-8)
+ '(frame-title-format "%b@%f" t)
+ '(global-linum-mode t)
+ '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
+ '(kill-ring-max 50)
+ '(make-backup-files nil)
+ '(package-selected-packages
+   '(lua-mode restclient json-mode markdown-mode multiple-cursors company yasnippet-snippets yasnippet undo-tree use-package))
+ '(show-paren-mode t)
+ '(show-paren-mode-style 'parentheses)
+ '(size-indication-mode t)
+ '(tab-width 4)
+ '(tool-bar-mode nil)
+ '(truncate-partial-width-windows nil)
+ '(user-full-name "Jim Bo")
+ '(user-mail-address "Yunfeng.Bo@Gmail.com")
+ '(visible-bell t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -14,7 +35,12 @@
  )
 
 (add-to-list 'load-path (expand-file-name (concat user-emacs-directory "lisp/")))
+
+;; base config
 (require 'init-main)
 (require 'init-shell)
 (require 'init-ui)
 (require 'init-package)
+
+;; program
+(require 'init-lua)
