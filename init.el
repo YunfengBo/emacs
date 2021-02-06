@@ -44,3 +44,4 @@
 
 ;; program
 (require 'init-lua)
+(require 'init-rust)
